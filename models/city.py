@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """This is the city class"""
-
 from sqlalchemy.ext.declarative import declarative_base
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, Integer, String
@@ -10,14 +9,10 @@ from models.place import Place
 
 
 class City(BaseModel, Base):
-    """
-     A class representing cities in a database.
-
+    """This is the class for City
     Attributes:
-        __tablename__ (str): The name of the database table for cities.
-        name (Column): The name of the city
-        state_id (Column): The foreign key reference to the associated state
-        places: to associate places in city with cascading delete options.
+        state_id: The state id
+        name: input name
     """
     __tablename__ = "cities"
     name = Column(String(128), nullable=False)

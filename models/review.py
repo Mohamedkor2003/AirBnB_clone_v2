@@ -6,10 +6,10 @@ from sqlalchemy import Column, Integer, String, ForeignKey, Float
 
 
 class Review(BaseModel, Base):
-    """Represent the class for Review
+    """This is the class for Review
     Attributes:
-        place_id: the place id
-        user_id: the user id
+        place_id: place id
+        user_id: user id
         text: review description
     """
     __tablename__ = "reviews"
